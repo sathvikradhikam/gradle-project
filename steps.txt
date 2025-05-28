@@ -1,0 +1,65 @@
+pg2 part 1 (jar file)
+1. mvn archetype:generate -DgroupId=com.mvit -DartifactId=nykaa-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+2. cd nykaa-app
+3. mvn compile
+4. mvn test
+5. mvn package
+6. java -cd target/nykaa-app -1.0.jar com.mvit.App
+----------------------------------------------------------------------------
+pg2 part 2
+1. mvn archetype:generate -DgroupId=com.mvit -DartifactId=nykaa-app -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4 -DinteractiveMode=false
+2. cd nykaa-app
+3. mvn compile
+4. mvn test
+5. mvn package
+6. open pom file and add the following plugin
+   <plugin> 
+          <groupId>org.apache.tomcat.maven</groupId>
+          <artifactId>tomcat7-maven-plugin</artifactId>
+          <version>2.2</version>
+          <configuration>
+            <port>8080</port>
+            <path>/</path>
+          </configuration>
+        </plugin>
+7. mvn tomcat7:run
+8. http://localhost:8080/index.jsp
+----------------------------------------------------------------------------
+pg3
+gradle init
+1 application
+1 java
+17
+1 single application project
+no
+2 groovy
+1 JUnit 4
+gradle build
+gradle test
+gradle run
+----------------------------------------------------------------------------
+pg4 
+
+1. mvn archetype:generate -DgroupId=com.mvit -DartifactId=nykaa-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+2. cd nykaa-app
+3. mvn compile
+4. mvn test
+5. mvn package
+
+gradle init
+yes
+1 application
+1 java
+17
+1 single application project
+no
+2 groovy
+1 JUnit 4
+gradle build
+gradle test
+build 
+id 'application'
+application{
+    mainClass='com.mvit.App'
+}
+gradle run
